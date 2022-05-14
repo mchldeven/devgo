@@ -3,6 +3,8 @@ module github.com/michaeldeven/devgo
 go 1.17
 
 require (
+	github.com/bxcodec/faker/v3 v3.8.0
+	github.com/google/uuid v1.3.0
 	github.com/gorilla/mux v1.8.0
 	github.com/joho/godotenv v1.4.0
 	github.com/shopspring/decimal v1.3.1
