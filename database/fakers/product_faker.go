@@ -6,6 +6,8 @@ import (
 	"math/rand"
 	"time"
 
+	"github.com/bxcodec/faker/v3"
+	"github.com/google/uuid"
 	"github.com/michaeldeven/devgo/app/models"
 	"github.com/shopspring/decimal"
 	"gorm.io/gorm"
@@ -25,11 +27,11 @@ func ProductFaker(db *gorm.DB) *models.Product {
 		Sku:              slug.Make(name),
 		Name:             name,
 		Slug:             slug.Make(name),
-		Price:            decimal.NewFromFloat(fakePrice()),
-		Stock:            rand.Intn(100),
-		Weight:           decimal.NewFromFloat(rand.Float64()),
-		ShortDescription: faker.Paragraph(),
-		Description:      faker.Paragraph(),
+		Harga:            decimal.NewFromFloat(fakePrice()),
+		Stok:            rand.Intn(100),
+		Berat:           decimal.NewFromFloat(rand.Float64()),
+		DeskripsiPendek: faker.Paragraph(),
+		Deskripsi:      faker.Paragraph(),
 		Status:           1,
 		CreatedAt:        time.Time{},
 		UpdatedAt:        time.Time{},
