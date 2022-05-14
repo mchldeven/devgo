@@ -8,6 +8,7 @@ import (
 
 	"github.com/bxcodec/faker/v3"
 	"github.com/google/uuid"
+	"github.com/gosimple/slug"
 	"github.com/michaeldeven/devgo/app/models"
 	"github.com/shopspring/decimal"
 	"gorm.io/gorm"
@@ -25,7 +26,7 @@ func ProductFaker(db *gorm.DB) *models.Product {
 		ID:               uuid.New().String(),
 		UserID:           user.ID,
 		Sku:              slug.Make(name),
-		Name:             name,
+		Nama:             name,
 		Slug:             slug.Make(name),
 		Harga:            decimal.NewFromFloat(fakePrice()),
 		Stok:            rand.Intn(100),

@@ -1,7 +1,9 @@
 package seeders
 
-import "gorm.io/gorm"
-"github.com/michaeldeven/devgo/app/fakers"
+import (
+	"github.com/michaeldeven/devgo/database/fakers"
+	"gorm.io/gorm"
+)
 
 type Seeder struct {
 	Seeder interface{}

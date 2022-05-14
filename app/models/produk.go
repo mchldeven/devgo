@@ -20,7 +20,7 @@ type Product struct {
 	Harga            decimal.Decimal `gorm:"type:decimal(16,2);"`
 	Stok             int
 	Berat            decimal.Decimal `gorm:"type:decimal(10,2);"`
-	DeskripsiPendek string          `gorm:"size:255"`
+	DeskripsiPendek string          `gorm:"type:text"`
 	Deskripsi      string          `gorm:"type:text"`
 	Status           int             `gorm:"default:0"`
 	CreatedAt        time.Time
